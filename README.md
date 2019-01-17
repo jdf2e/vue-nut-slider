@@ -8,22 +8,22 @@ Vue移动端滑动轮播组件
 横向无缝切换
 
 ```html
-<nut-swiper
+<nut-slider
     :paginationVisibile="true"
     direction="horizontal"
     ref="demo1"
     
 >
-    <div  v-for="(item,index) in dataItem" :key="index"  class="nut-swiper-slide">
+    <div  v-for="(item,index) in dataItem" :key="index"  class="nut-slider-slide">
         <span>page{{item.name}}</span>
     </div>
-</nut-swiper>
+</nut-slider>
 ```
 
 横向切换
 
 ```html
-<nut-swiper
+<nut-slider
     :paginationVisibile="true"
     direction="horizontal"
     ref="demo2"
@@ -31,17 +31,17 @@ Vue移动端滑动轮播组件
     :paginationVisible="true"
     
 >
-    <div  v-for="(item,index) in dataItem" :key="index"  class="nut-swiper-slide">
+    <div  v-for="(item,index) in dataItem" :key="index"  class="nut-slider-slide">
         <span>page{{item.name}}</span>
     </div>
 
-</nut-swiper>
+</nut-slider>
 ```
 
 横向循环切换
 
 ```html
-<nut-swiper
+<nut-slider
     :paginationVisibile="true"
     direction="horizontal"
     ref="demo3"
@@ -50,59 +50,59 @@ Vue移动端滑动轮播组件
     :paginationVisible="true"
     
 >
-    <div  class="nut-swiper-slide gray" >
+    <div  class="nut-slider-slide gray" >
         <span>page 1</span>
     </div>
-    <div  class="nut-swiper-slide gray_1" >
+    <div  class="nut-slider-slide gray_1" >
         <span>page 2</span>
     </div>
-    <div  class="nut-swiper-slide gray" >
+    <div  class="nut-slider-slide gray" >
         <span>page 3</span>
     </div>
-    <div  class="nut-swiper-slide gray_1" >
+    <div  class="nut-slider-slide gray_1" >
         <span>page 4</span>
     </div>
-</nut-swiper>
+</nut-slider>
 ```
 
 纵向自动播放
 
 ```html
- <nut-swiper
+ <nut-slider
     direction="vertical"
     ref="dem4"
     :autoPlay="3000"
     id="dome4"
 >
-    <div  class="nut-swiper-slide gray" >
+    <div  class="nut-slider-slide gray" >
         <span>page 1</span>
     </div>
-    <div  class="nut-swiper-slide gray_1" >
+    <div  class="nut-slider-slide gray_1" >
         <span>page 2</span>
     </div>
-    <div  class="nut-swiper-slide gray" >
+    <div  class="nut-slider-slide gray" >
         <span>page 3</span>
     </div>
-    <div  class="nut-swiper-slide gray_1" >
+    <div  class="nut-slider-slide gray_1" >
         <span>page 4</span>
     </div>
-</nut-swiper>
+</nut-slider>
 ```
 
 滑动懒加载图片
 
 ```html
-<nut-swiper
+<nut-slider
     direction="horizontal"
     ref="demo4"
     :lazyLoad="true"
         :paginationVisible="true"
 >
-        <div  v-for="(item,index) in dataImgItem" :key="index"  class="nut-swiper-slide ">
+        <div  v-for="(item,index) in dataImgItem" :key="index"  class="nut-slider-slide ">
         <img :data-src="item.imgSrc"   style="max-width:100%; max-height:100%" class="nut-img-lazyload"/> 
     </div>
 
-</nut-swiper>
+</nut-slider>
 ```
 
 ```javascript
