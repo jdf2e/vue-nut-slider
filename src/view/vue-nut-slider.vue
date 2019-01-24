@@ -239,6 +239,11 @@ export default {
             }
         },
         _onTransitionEnd(){
+            if(this._isPageChanged()){
+                this.$emit('slideChangeEnd',this.currentPage,this.$el);
+            }else{
+                this.$emit('slideRevertEnd',this.currentPage,this.$el);
+            }
             this.transitionDuration = 0;
             this.delta = 0;
             this.lastPage = this.currentPage;
@@ -247,11 +252,7 @@ export default {
                 this._setTranslate(this._getTranslateOfPage(this.currentPage));
             }
             this.stopAutoPlay = false;
-            if(this._isPageChanged()){
-                this.$emit('slideChangeEnd',this.currentPage,this.$el);
-            }else{
-                this.$emit('slideRevertEnd',this.currentPage,this.$el);
-            }
+
         },
         _isPageChanged(){
             return this.lastPage !== this.currentPage;
